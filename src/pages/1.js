@@ -22,7 +22,7 @@ export default ({ data }) => {
   }
 
   const adjustPage = e => {
-    setTempHold(e.target.value)
+    setTempHold(Number(e.target.value))
   }
 
   const changePage = evt => {
