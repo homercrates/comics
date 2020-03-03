@@ -94,7 +94,6 @@ export default ({ data }) => {
           </label>
           <input type="submit" value="Submit"></input>
         </form>
-        <button onClick={() => console.log("which: " + whichEp)}>print</button>
       </div>
     </Layout>
   )
