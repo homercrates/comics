@@ -38,7 +38,6 @@ export default ({ children }) => {
               <NavList to="/">Home</NavList>{" "}
               <NavList to="/about-css-modules/">About</NavList>
               <NavList to="/contact/">Contact</NavList>
-              <NavList to="/my-files//">My Files</NavList>
             </ul>
           </div>
         </div>
