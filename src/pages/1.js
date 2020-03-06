@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import { graphql } from "gatsby"
@@ -46,10 +46,9 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Zack's
+          {/* CHANGE Author Here */}
+          {data.site.siteMetadata.personA.name}
         </h1>
-        <h4>Zack's Minesweeper Series</h4>
-        <div>here</div>
 
         <div>
           {data.allMarkdownRemark.nodes
@@ -84,16 +83,20 @@ export default ({ data }) => {
               </div>
             ))}
         </div>
+        <div style={{ display: `flex`, justifyContent: `space-between` }}>
+          <div>
+            <button onClick={backOne}>back</button>
+            <button onClick={forwardOne}>forward</button>
+          </div>
 
-        <button onClick={backOne}>back</button>
-        <button onClick={forwardOne}>forward</button>
-        <form onSubmit={changePage}>
-          <label>
-            Skip To Page:
-            <input type="number" value={tempHold} onChange={adjustPage} />
-          </label>
-          <input type="submit" value="Submit"></input>
-        </form>
+          <form onSubmit={changePage}>
+            <label>
+              Skip To Page:
+              <input type="number" value={tempHold} onChange={adjustPage} />
+            </label>
+            <input type="submit" value="Submit"></input>
+          </form>
+        </div>
       </div>
     </Layout>
   )
@@ -116,6 +119,32 @@ export const query = graphql`
           author
         }
         excerpt
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        aLittleXtra
+        personA {
+          name
+          description
+          pref
+        }
+        personB {
+          name
+          description
+          pref
+        }
+        personC {
+          name
+          description
+          pref
+        }
+        personD {
+          name
+          description
+          pref
+        }
       }
     }
   }
