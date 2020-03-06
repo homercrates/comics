@@ -8,15 +8,27 @@ import Layout from "./layout"
 
 export default ({ data }) => {
   const [whichEp, setWhichEp] = useState(1)
+  const [tempHold, setTempHold] = useState(1)
+
   const forwardOne = () => {
-    setWhichEp(whichEp + 1)
-    console.log(whichEp)
+    let spot = whichEp
+    setWhichEp(spot + 1)
   }
   const backOne = () => {
+    let spot = whichEp
     if (whichEp > 1) {
-      setWhichEp(whichEp - 1)
-      console.log(whichEp)
+      setWhichEp(spot - 1)
     }
+  }
+
+  const adjustPage = e => {
+    setTempHold(Number(e.target.value))
+  }
+
+  const changePage = evt => {
+    evt.preventDefault()
+    console.log(tempHold + ": changing whichEp")
+    setWhichEp(tempHold)
   }
 
   return (
@@ -34,14 +46,15 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Mediocritis
+          {/* CHANGE Author Here */}
+          {data.site.siteMetadata.personB.name}
         </h1>
-        <h4>Nick's Mediocritis Series</h4>
+
         <div>
           {data.allMarkdownRemark.nodes
             .filter(ech => ech.frontmatter.episode === whichEp)
             .map(({ frontmatter }) => (
-              <div key={"nodes.id"}>
+              <div key={frontmatter.episode}>
                 <h3
                   css={css`
                     margin-bottom: ${rhythm(1 / 4)};
@@ -57,6 +70,8 @@ export default ({ data }) => {
                     - {frontmatter.date}
                   </span>
                 </h3>
+                <p>{data.allMarkdownRemark.nodes.id}</p>
+
                 <Header
                   title={frontmatter.title}
                   episode={frontmatter.episode}
@@ -65,10 +80,23 @@ export default ({ data }) => {
                   totalCount={data.allMarkdownRemark.totalCount}
                   author={data.allMarkdownRemark.author}
                 />
-                <button onClick={backOne}>back</button>
-                <button onClick={forwardOne}>forward</button>
               </div>
             ))}
+        </div>
+
+        <div style={{ display: `flex`, justifyContent: `space-between` }}>
+          <div>
+            <button onClick={backOne}>back</button>
+            <button onClick={forwardOne}>forward</button>
+          </div>
+
+          <form onSubmit={changePage}>
+            <label>
+              Skip To Page:
+              <input type="number" value={tempHold} onChange={adjustPage} />
+            </label>
+            <input type="submit" value="Submit"></input>
+          </form>
         </div>
       </div>
     </Layout>
@@ -92,6 +120,32 @@ export const query = graphql`
           author
         }
         excerpt
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        aLittleXtra
+        personA {
+          name
+          description
+          pref
+        }
+        personB {
+          name
+          description
+          pref
+        }
+        personC {
+          name
+          description
+          pref
+        }
+        personD {
+          name
+          description
+          pref
+        }
       }
     }
   }
