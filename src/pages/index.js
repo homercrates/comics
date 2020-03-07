@@ -40,61 +40,6 @@ export default ({ data }) => {
   )
 }
 
-/*
-export default ({ data }) => {
-  return (
-    <Layout>
-      <div
-        style={{
-          color: `purple`,
-        }}
-      ></div>
-      <div>
-        <br />
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Mediocritis
-        </h1>
-        <h4>Nick's Mediocritis Series</h4>
-        <div>
-          {data.allMarkdownRemark.edges
-            .filter(check => check.node.frontmatter.series === seriesVar)
-            .map(({ node }) => (
-              <div key={node.id}>
-                <h3
-                  css={css`
-                    margin-bottom: ${rhythm(1 / 4)};
-                  `}
-                >
-                  {node.frontmatter.title}{" "}
-                  <span
-                    css={css`
-                      color: #bbb;
-                    `}
-                  >
-                    {" "}
-                    - {node.frontmatter.date}
-                  </span>
-                </h3>
-                <Header
-                  title={node.frontmatter.title}
-                  episode={node.frontmatter.episode}
-                  text={node.excerpt}
-                  imgLink={node.frontmatter.imgLink}
-                  series={node.frontmatter.series}
-                />
-              </div>
-            ))}
-        </div>
-      </div>
-    </Layout>
-  )
-}
-*/
 export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

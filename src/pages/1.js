@@ -83,6 +83,7 @@ export default ({ data }) => {
               </div>
             ))}
         </div>
+
         <div style={{ display: `flex`, justifyContent: `space-between` }}>
           <div>
             <button onClick={backOne}>back</button>
