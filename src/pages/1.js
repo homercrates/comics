@@ -70,7 +70,6 @@ export default ({ data }) => {
                     - {frontmatter.date}
                   </span>
                 </h3>
-                <p>{data.allMarkdownRemark.nodes.id}</p>
 
                 <Header
                   title={frontmatter.title}
