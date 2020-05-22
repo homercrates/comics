@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 const NavList = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+  <li style={{ display: `inline-block`, marginRight: `1rem`, color: `black` }}>
     <div>
       <Link to={props.to}>{props.children}</Link>
     </div>

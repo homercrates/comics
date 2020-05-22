@@ -32,7 +32,7 @@ export default ({ data }) => (
         excerpt={data.site.siteMetadata.personA.description}
         linkTo={data.site.siteMetadata.personA.name}
       />
-      <p>lets put meta data here: {data.site.siteMetadata.aLittleXtra}</p>
+      <p>lets put meta data there: {data.site.siteMetadata.aLittleXtra}</p>
       <User
         username={"Thor Dangerson"}
         author={data.site.siteMetadata.personB.name}

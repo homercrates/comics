@@ -7,4 +7,4 @@ imgLink: https://imgur.com/ki7AF1q.jpg
 author: "Nick"
 ---
 
-Second episode of Nicks 'Stand Half Way Up' Series.
+Second episode of Nicks 'Stand Half Way Up too' Series.

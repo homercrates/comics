@@ -8,14 +8,15 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    
     "serve": "gatsby serve",
-    "clean": "gatsby clean","start": "npm run develop",
+    "clean": "gatsby clean",
+    "start": "npm run develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "gatsby": "^2.19.10",
+    "gatsby-cli": "^2.12.21",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-typography": "^2.3.21",
