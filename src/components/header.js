@@ -26,9 +26,9 @@ export default props => (
             — {props.date}
           </span>
         </h3>
-        <p>episode: {props.episode}</p>
+        {props.episode ? <p>episode: {props.episode}</p> : null}
         <div>
-          <img src={props.imgLink} alt="random" />
+          {props.imgLink ? <img src={props.imgLink} alt="random" /> : null}
         </div>
         <p>{props.text}</p>
       </div>
