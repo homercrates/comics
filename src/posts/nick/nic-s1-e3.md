@@ -4,7 +4,7 @@ date: "2020-02-17"
 series: 1
 episode: 3
 imgLink: https://imgur.com/ki7AF1q.jpg
-author: "Nick"
+author: "Nic"
 ---
 
 Second episode of Nicks 'Stand Half Way Up too' Series.

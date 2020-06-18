@@ -22,7 +22,7 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Nicks Various Series
+          Nics Various Series
         </h1>
         <h4>Click a Series to read</h4>
         <div>
@@ -63,10 +63,10 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query Nick {
+  query Nic {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: [DESC, ASC] }
-      filter: { frontmatter: { author: { eq: "Nick" } } }
+      filter: { frontmatter: { author: { eq: "Nic" } } }
     ) {
       nodes {
         id
