@@ -9,7 +9,7 @@ module.exports = {
     title: `oiio`,
     aLittleXtra: `extra saucey sauce here`,
     personA: {
-      name: `Nick`,
+      name: `Nic`,
       description: `Hottest dude around`,
       pref: `purple`,
     },
