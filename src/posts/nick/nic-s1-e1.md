@@ -7,4 +7,4 @@ imgLink: https://i.imgur.com/h3efMWC.jpg
 author: "Nic"
 ---
 
-First episode of Nicks 'Stand Half Way Up' Series.
+First episode of Nic's 'Stand Half Way Up' Series.
