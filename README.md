@@ -1,6 +1,6 @@
 # comics
 
-## WIP
+### WIP
 
 ## Using Gatsby to create an easy way for me to turn friends markdown into an updated comicstrip CMS blog.
 

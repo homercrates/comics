@@ -19,12 +19,12 @@ module.exports = {
       pref: `blue`,
     },
     personC: {
-      name: `Ben`,
+      name: `Diego`,
       description: `Yeah dude, yes.`,
       pref: `black`,
     },
     personD: {
-      name: `Mer`,
+      name: `Meredith`,
       description: `sick belt buckle bro`,
       pref: `blue`,
     },
