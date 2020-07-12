@@ -15,7 +15,7 @@ module.exports = {
     },
     personB: {
       name: `Zack`,
-      description: `godd at bizzness`,
+      description: `good at bizzness`,
       pref: `blue`,
     },
     personC: {
