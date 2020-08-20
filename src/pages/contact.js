@@ -14,7 +14,7 @@ export default () => (
         imgLink={false}
         episode={false}
       />
-      <p>Send us a message!</p>
+      <p>Send us a message! ..</p>
       <p>
         <a href="mailto:me@example.com">me@example.com</a>
       </p>
