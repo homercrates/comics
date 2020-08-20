@@ -21,7 +21,7 @@ const User = props => (
 export default ({ data }) => (
   <Layout>
     <Container>
-      <h1>About CSS Modules {data.site.siteMetadata.title} </h1>
+      <h1>About  {data.site.siteMetadata.title} </h1>
       <p>CSS Modules are cool</p>
       <User
         username={"Dude Johnson"}
@@ -32,7 +32,11 @@ export default ({ data }) => (
         excerpt={data.site.siteMetadata.personA.description}
         linkTo={data.site.siteMetadata.personA.name}
       />
+
+
       <p>lets put meta data there: {data.site.siteMetadata.aLittleXtra}</p>
+
+
       <User
         username={"Thor Dangerson"}
         author={data.site.siteMetadata.personB.name}
@@ -43,7 +47,7 @@ export default ({ data }) => (
         linkTo={data.site.siteMetadata.personB.name}
       />
       <User
-        username={"Ben Justice"}
+        username={"Lego my Ego"}
         author={data.site.siteMetadata.personC.name}
         avatar={
           "https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"

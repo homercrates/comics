@@ -1,5 +1,5 @@
 ---
-title: "Zack Mine Whisperer"
+title: "Zack Worm Wormy"
 date: "2019-12-31"
 series: 2
 episode: 1

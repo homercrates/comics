@@ -47,7 +47,7 @@ export default ({ data }) => {
           `}
         >
           {/* CHANGE Author Here */}
-          {data.site.siteMetadata.personA.name}
+          {data.site.siteMetadata.personA.name} 
         </h1>
 
         <div>
@@ -103,6 +103,7 @@ export default ({ data }) => {
   )
 }
 
+// Series switch  here  Int! = Number of series
 export const query = graphql`
   query($vari: Int! = 6) {
     allMarkdownRemark(

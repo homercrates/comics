@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import '../styles/global.css'
 
 const NavList = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem`, color: `black` }}>
     <div>
-      <Link to={props.to}>{props.children}</Link>
+      <Link className="navBar" to={props.to}>{props.children}</Link>
     </div>
   </li>
 )
@@ -32,8 +33,8 @@ export default ({ children }) => {
     >
       <header style={{ marginBottom: `1.5rem` }}>
         <div>
-          <h3>{data.site.siteMetadata.title}</h3>
           <div>
+            <h3>{data.site.siteMetadata.title}</h3>
             <ul style={{ listStyle: `none`, float: `right` }}>
               <NavList to="/">Home</NavList>{" "}
               <NavList to="/about-css-modules/">About</NavList>

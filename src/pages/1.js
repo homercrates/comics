@@ -85,8 +85,8 @@ export default ({ data }) => {
 
         <div style={{ display: `flex`, justifyContent: `space-between` }}>
           <div>
-            <button onClick={backOne}>back</button>
-            <button onClick={forwardOne}>forward</button>
+            <button onClick={backOne} >back</button>
+            <button onClick={forwardOne} >forward</button>
           </div>
 
           <form onSubmit={changePage}>
@@ -102,6 +102,7 @@ export default ({ data }) => {
   )
 }
 
+// Series switch  here  Int! = Number of series
 export const query = graphql`
   query($vari: Int! = 1) {
     allMarkdownRemark(

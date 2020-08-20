@@ -7,17 +7,13 @@ import { graphql } from "gatsby"
 import Header from "../components/header"
 import Layout from "./layout"
 
+
 export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Comics
+        <h1>
+          Series List:
         </h1>
         {data.allMarkdownRemark.edges
           // only show episode 1 of each series

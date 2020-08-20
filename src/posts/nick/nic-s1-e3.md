@@ -1,5 +1,5 @@
 ---
-title: "Nic's Mediocritis"
+title: "Nics testingcles"
 date: "2020-02-17"
 series: 1
 episode: 3
